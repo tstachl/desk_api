@@ -1,4 +1,6 @@
 class DeskApi::Resource
+  attr_reader :_definition
+
   class << self
     def build_self_link(link, params = {})
       link = {'href'=>link} if link.kind_of?(String)
